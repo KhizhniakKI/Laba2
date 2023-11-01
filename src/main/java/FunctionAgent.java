@@ -5,14 +5,14 @@ import lombok.Data;
 public class FunctionAgent extends Agent {
     boolean flg = true;
     @Override
-    protected void setup(){
+    protected void setup() {
         System.out.println(getLocalName() + " Я Игрок");
-        if (getLocalName().equals("Agent1") && flg){
+        if (getLocalName().equals("Agent1") && flg) {
             addBehaviour(new InitiateDistributedCalculation());
             flg = false;
         }
-        addBehaviour(new CalcMyFynction());
-        addBehaviour(new CatchInitiative());
-    }
+            addBehaviour(new CalcMyFynction());
+            addBehaviour(new CatchInitiative());
 
+    }
 }
